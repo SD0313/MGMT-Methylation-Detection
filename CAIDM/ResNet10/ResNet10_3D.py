@@ -1,5 +1,6 @@
 import tensorflow as tf
 from tensorflow.keras.layers import Dense, Conv3D, GlobalAveragePooling3D, MaxPool3D, Input, BatchNormalization, Activation, Add, AveragePooling3D
+import numpy as np
 
 
 def build_resnet():
@@ -65,3 +66,35 @@ def build_resnet():
 
     model = tf.keras.Model(inputs=inp, outputs=out)
     return model
+
+
+class ResNet10_3D(tf.keras.Model):
+    def __init__(self):
+        super(ResNet10_3D, self).__init__()
+        self.model = build_resnet()
+    
+    def call(self, xs):
+        return self.model(xs)
+    
+#     def compile(self, **kwargs):
+#         super(ResNet10_3D, self).compile()
+#         self.opt = kwargs['optimizer']
+#         self.loss = kwargs['loss']
+    
+#     def train_step(self, data):
+#         xs, ys = data
+#         with tf.GradientTape() as tape:
+#             y_hat = self(xs, training=True)
+#             loss = self.loss(ys, y_hat)
+#         grads = tape.gradient(loss, self.trainable_variables)
+#         self.opt.apply_gradients(zip(grads, self.trainable_variables))
+#         return {'loss': loss}
+    
+#     def test_step(self, data):
+#         xs, ys = data
+#         y_pred = self(xs, training=False)
+#         loss = self.loss(ys, y_pred)
+#         return {'loss': loss}
+    
+    
+            
