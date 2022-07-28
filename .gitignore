@@ -1,4 +1,8 @@
 *.ipynb_checkpoints
 *pycache
 *.pyc
+*jarvis_tutorial
+*scripts
+*logdirs
+.*core
 
