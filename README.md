@@ -1,2 +1,2 @@
 # MGMT-Methylation-Detection
-This repository contains the code for the preprint ["Optimizing Prediction of MGMT Promoter Methylation from MRI Scans using Adversarial Learning"](https://ieeexplore.ieee.org/abstract/document/10097941). Currently being developed with CAIDM at UC Irvine.
+This repository contains the code for the ["Optimizing Prediction of MGMT Promoter Methylation from MRI Scans using Adversarial Learning"](https://ieeexplore.ieee.org/abstract/document/10097941) published in the 34th IEEE International Conference on Tools for Artificial Intelligence (ICTAI). Developed in collaboration with Center for AI in Diagnostic Medicine at UC Irvine.
